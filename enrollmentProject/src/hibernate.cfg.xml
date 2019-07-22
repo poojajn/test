@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+
+		<!-- Connection settings -->
+		<property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+		<property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/postgres</property>
+		<property name="hibernate.connection.username">postgres</property>
+		<property name="hibernate.connection.password">postgres</property>
+		<property name="hibernate.connection.pool_size">999</property>
+		<property name="hibernate.current_session_context_class">org.hibernate.context.internal.ThreadLocalSessionContext</property>
+
+		<!-- SQL dialect -->
+		<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+
+
+		<!-- Print executed SQL to stdout -->
+		<property name="show_sql">true</property>
+		<!-- Setup Package Bean Classes -->
+
+
+<property name="hbm2ddl.auto">create</property>
+<mapping class="com.excelit.bean.StudentInformation" />
+<mapping class="com.excelit.bean.StudentProfileBean" />
+	</session-factory>
+
+
+
+</hibernate-configuration>
